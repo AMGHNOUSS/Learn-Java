@@ -9,5 +9,7 @@ public class Car {
         System.out.println(x + y);
         int z = x + y;
         System.out.println(z);
+        int a = 10, b = 10;
+        System.out.println(a + b);
     }
 }
