@@ -1,4 +1,5 @@
 
+// Sum All value of array.
 
 public class SumArrays {
     public static void main(String[] args){
