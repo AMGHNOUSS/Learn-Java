@@ -14,7 +14,7 @@ public class Average {
         }
 
         float min = MinArray(arr);
-        System.out.println("The smallest number of these three : " + min);
+        System.out.println("The average of three numbers : " + min);
     }
 
     public static float MinArray(int[] arr) {
