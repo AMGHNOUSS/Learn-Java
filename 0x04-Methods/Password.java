@@ -19,8 +19,20 @@ public class Password {
     }
     
     public static boolean check_password(String str){
-        if (str.length() < 12)
+        boolean flag = true;
+        if (str.length() < 10)
             return false;
-        
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c < 47)
+                return false;
+            else if (c > 57 && c < 65)
+                return false;
+            else if (c >  90 && c < 97)
+                return false;
+            else if (c > 122)
+                return false;
+        }
+        return flag;
     }
 }
