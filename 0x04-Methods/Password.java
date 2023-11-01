@@ -1,6 +1,5 @@
 
 // check whether a string is a valid password.
-
 import java.util.Scanner;
 
 public class Password {
