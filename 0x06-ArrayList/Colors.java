@@ -1,5 +1,5 @@
 
-// package 0x06-ArrayList;
+// 
 
 import java.util.ArrayList;
 
