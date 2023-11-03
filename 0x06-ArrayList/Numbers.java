@@ -46,7 +46,27 @@ public class Numbers {
                 arr.remove(i);
         }
     }
+
     public static void SortList(ArrayList<Integer> arr) {
         Collections.sort(arr);        
+    }
+
+    public static int SecondLargest(ArrayList<Integer> arr) {
+        int flag = 0;
+        int Fisrt = arr.get(0), Second = arr.get(0);
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(0) > Fisrt) {
+                Fisrt = arr.get(i);
+                flag = i;
+            }
+        }
+        for (int i = 0; i < arr.size(); i++) {
+            if (flag == i)
+                continue;
+            else if (arr.get(i) > Second) {
+                Second = arr.get(i);
+            }
+        }
+        return Second;
     }
 }
