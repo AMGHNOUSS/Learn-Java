@@ -46,5 +46,7 @@ public class Numbers {
                 arr.remove(i);
         }
     }
-    
+    public static void SortList(ArrayList<Integer> arr) {
+        Collections.sort(arr);        
+    }
 }
