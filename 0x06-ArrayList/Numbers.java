@@ -21,21 +21,26 @@ public class Numbers {
             while (true) {
                 System.out.print("Enter value de list at index " + i + " : ");
                 input = obj.nextInt();
-                if (input == 0)
+                if (input != 0) {
+                    MyNumbers.add(input);
+                }
+                else
                     break;
                 i++;
-                MyNumbers.add(input);
             }
             System.out.println("List :" + MyNumbers);
-            System.out.println("Remove all value duplicated.");
             removeDuplicate(MyNumbers);
             SortList(MyNumbers);
+            int num = SecondLargest(MyNumbers);
+            ReverseArray(MyNumbers);
+            System.out.println("Second Largest number is  : " + num);
+            System.out.println("List :" + MyNumbers);
         }
     }
 
     public static void removeDuplicate(ArrayList<Integer> arr){
         int count = 0;
-        for (int i = arr.size() - 1; i >= 0; i++) {
+        for (int i = arr.size() - 1; i >= 0; i--) {
             count = 0;
             for (int j = 0; j < arr.size(); j++) {
                 if (arr.get(i) == arr.get(j)) {
@@ -55,7 +60,7 @@ public class Numbers {
         int flag = 0;
         int Fisrt = arr.get(0), Second = arr.get(0);
         for (int i = 0; i < arr.size(); i++) {
-            if (arr.get(0) > Fisrt) {
+            if (arr.get(i) > Fisrt) {
                 Fisrt = arr.get(i);
                 flag = i;
             }
@@ -68,5 +73,15 @@ public class Numbers {
             }
         }
         return Second;
+    }
+
+    public static void ReverseArray(ArrayList<Integer> arr) {
+        int m, n;
+        for (int i = 0; i < arr.size() / 2; i++) {
+            m = arr.get(i);
+            n = arr.get(arr.size() - 1 - i);
+            arr.set(arr.size() - 1 - i, m);
+            arr.set(i, n);
+        }
     }
 }
