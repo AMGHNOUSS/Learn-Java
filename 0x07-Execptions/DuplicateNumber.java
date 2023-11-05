@@ -4,15 +4,12 @@
  * an exception if any numbers are duplicates.
  */
 
-import java.io.EOFException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class DuplicateNumber {
     public static void main(String[] args) {
-        try {
-            Scanner obj = new Scanner(System.in);
+        try (Scanner obj = new Scanner(System.in)){
             ArrayList<Integer> MyNumbers = new ArrayList<Integer>();
             int input, i =0;
             System.out.println("Enter 0 if you want to stop");
