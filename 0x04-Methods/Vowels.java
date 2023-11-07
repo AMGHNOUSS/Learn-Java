@@ -1,8 +1,7 @@
 
 // count all vowels in a string at given i narguments
 
-public class Vowels 
-{
+public class Vowels {
     public static void main(String[] args) {
         System.out.print("Number of Vowels in the string: " + CountVowels(args[0]));
     }
