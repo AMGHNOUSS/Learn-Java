@@ -1,4 +1,3 @@
-package X8Classes;
 /* 
  * Create a class called "Person" with a name and age attribute.
  * Create two instances of the "Person" class, set their attributes using the constructor.
@@ -15,5 +14,10 @@ class Person {
 
     public void method() {
         System.out.println("Name: " + name + " Age: " + age);
+    }
+    public static void main(String[] args) {
+        
+        Person p = new Person("Redouane", 21);
+        p.method();
     }
 }

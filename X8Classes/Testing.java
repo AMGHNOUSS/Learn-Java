@@ -1,4 +1,3 @@
-package X8Classes;
 // We all test our class here.
 public class Testing {
     public static void main(String[] args) {
