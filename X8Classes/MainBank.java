@@ -9,7 +9,30 @@ import java.util.ArrayList;
 
 public class MainBank {
     public static void main(String[] args) {
-        
+        Bank bank = new Bank();
+
+        Account account1 = new Account("Peter Irmgard", "C0011", 5000);
+        Account account2 = new Account("Katja Ruedi", "C0121", 4500);
+        Account account3 = new Account("Marcella Gebhard", "C0222", 20000);
+
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+        bank.addAccount(account3);
+
+        ArrayList < Account > accounts = bank.getAccounts();
+
+        for (Account account: accounts) {
+            account.print();
+        }
+
+        System.out.println("\nAfter depositing 1000 into account1:");
+        bank.deposit(account1, 1000);
+        account1.print();
+        System.out.println("No transaction in account2:");
+        account2.print();
+        System.out.println("After withdrawing 5000 from account3:");
+        bank.withdraw(account3, 5000);
+        account3.print();
     }
 }
 
@@ -59,5 +82,34 @@ class Account {
         System.out.print("Name : " + this.name);
         System.out.print(", Account Nmber : " + this.accountNumber);
         System.out.println(", balance : " + this.balance + ".");
+    }
+}
+
+
+class Bank {
+    private ArrayList<Account> accounts = new ArrayList<>();
+
+    public Bank() {
+        accounts = new ArrayList < Account > ();
+    }
+
+    public void addAccount(Account a) {
+        accounts.add(a);
+    }
+
+    public void RemoveAccount(Account a) {
+        accounts.remove(a);
+    }
+
+    public void deposit(Account account, double amount) {
+        account.deposit(amount);
+    }
+
+    public void withdraw(Account account, double amount) {
+        account.withdraw(amount);
+    }
+
+    public ArrayList <Account> getAccounts() {
+        return this.accounts;
     }
 }
