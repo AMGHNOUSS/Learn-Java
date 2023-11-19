@@ -16,9 +16,5 @@ public class Testing {
         d2.setBreed("Rottweiler");
         d1.print();
         d2.print();
-
-        Rectangle rec = new Rectangle(6, 5);
-        System.out.println("Area : " + rec.area() + " m2");
-        System.out.println("Perimeter : " + rec.perimeter() + " m");
     }    
 }
